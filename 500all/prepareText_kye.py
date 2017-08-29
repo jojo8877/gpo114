@@ -149,9 +149,9 @@ def addSpeechToSpeaker(speakerName, speech, initialCount=1): # When a new speake
 
 if __name__ == "__main__":
 
-	directory = "C:/Users/juyeon/Desktop/New Projects/Hearing Text/Hearings/Data/gpo114/gpo114/500/50A" # A default directory if no directory is given in previous step.
+	directory = "." # A default directory if no directory is given in previous step.
 	
-	hearingInfo = pd.DataFrame.from_csv(directory + "/hearing_223110.csv") # Previously worked out.
+	hearingInfo = pd.DataFrame.from_csv(directory + "/500all.csv") # Previously worked out.
 	
 	info = pd.DataFrame() # An empty data frame. Will contain information for all hearings.
 	
