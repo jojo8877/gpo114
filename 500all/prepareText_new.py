@@ -152,9 +152,9 @@ def addSpeechToSpeaker(speakerName, speech,
             df[thisFile]["description"].append("")
             df[thisFile]["state"].append("")
         else:
-            for i in range(len(committee["name"])):
-                if speakerName in committee["name"][i]:  # This speaker is a committee member.
-                    df[thisFile]["name"].append(committee["name"][i])
+            for i in range(len(committee["last"])):
+                if speakerName in committee["last"][i]:  # This speaker is a committee member.
+                    df[thisFile]["name"].append(committee["last"][i])
                     df[thisFile]["identity"].append("Committee" + committee["level"][i])
                     df[thisFile]["description"].append("")
                     df[thisFile]["state"].append(committee["state"][i])
@@ -169,10 +169,10 @@ def addSpeechToSpeaker(speakerName, speech,
         df[thisFile]["num_speeches"][thisIndex] += 1
 
 def findSpeakerFromCommittee(speaker):
-    for index, person in enumerate(committee['name']):
-        if speaker in person:
-            return person, committee['govtrack'][index]
-    return speaker, "N/A"
+    for index, person in enumerate(committee['last']):
+        if speaker.upper() in person.upper():
+            return committee['first'], person, committee['govtrack'][index]
+    return "", speaker, "N/A"
 
 
 if __name__ == "__main__":
@@ -186,6 +186,8 @@ if __name__ == "__main__":
     allSpeeches = pd.DataFrame() # data frame that contains all speeches
 
     files = []  # A list of txt files in the directory.
+
+    filesProcessed = 0
 
     for file in os.listdir(directory):  # Get a list of names for all text files in this directory
         if file.endswith(".txt"):
@@ -229,7 +231,8 @@ if __name__ == "__main__":
                     "file_name": [],
                     "title": [],
                     "govtrack": [],
-                    "speaker": [],
+                    "speaker_last": [],
+                    "speaker_first": [],
                     "speech": []}  # Save the speeches and speakers temporarily. Will be saved as the hearing segmented by speakers.
         isSpeech = False
         skip = True
@@ -243,7 +246,7 @@ if __name__ == "__main__":
         if committee is None:
             print("Error processing ", thisFile)
             continue
-        if len(committee["name"]) == 0:
+        if len(committee["govtrack"]) == 0:
             print("Empty committee list ", thisFile)
             continue
 
@@ -269,16 +272,18 @@ if __name__ == "__main__":
 
             if "Whereupon" in line and "adjourned" in line:  # At the end of hearing, there is "Whereupon, the committee was adjourned."
                 isSpeech = False
-                thisSpeakerName, thisSpeakerGovtrack = findSpeakerFromCommittee(thisSpeaker)
+                thisSpeakerFirst, thisSpeakerLast, thisSpeakerGovtrack = findSpeakerFromCommittee(thisSpeaker)
                 speeches['committee_name'].append(committee_name)
                 speeches['committee_code'].append(committee_code)
                 speeches['file_name'].append(thisFile)
                 speeches['title'].append(thisTitle)
                 speeches['govtrack'].append(thisSpeakerGovtrack)
-                speeches["speaker"].append(thisSpeakerName)
+                speeches["speaker_last"].append(thisSpeakerLast)
+                speeches["speaker_first"].append(thisSpeakerFirst)
                 speeches["speech"].append(speech)
                 addSpeechToSpeaker(thisSpeaker, speech)
                 print "Finished analyzing %s" % thisFile
+                filesProcessed += 1
 
             if isNewParagraph(line) and line.split()[
                 0] == "Present:":  # The paragraph indicating the committee members present.
@@ -310,13 +315,14 @@ if __name__ == "__main__":
                     if isNewSpeaker(
                             line):  # If a new speaker is detected, save the latest speech to the previous speaker
                         if thisSpeaker != "":
-                            thisSpeakerName, thisSpeakerGovtrack = findSpeakerFromCommittee(thisSpeaker)
+                            thisSpeakerFirst, thisSpeakerLast, thisSpeakerGovtrack = findSpeakerFromCommittee(thisSpeaker)
                             speeches['committee_name'].append(committee_name)
                             speeches['committee_code'].append(committee_code)
                             speeches['file_name'].append(thisFile)
                             speeches['title'].append(thisTitle)
                             speeches['govtrack'].append(thisSpeakerGovtrack)
-                            speeches["speaker"].append(thisSpeakerName)
+                            speeches["speaker_last"].append(thisSpeakerLast)
+                            speeches["speaker_first"].append(thisSpeakerFirst)
                             speeches["speech"].append(speech)
                             addSpeechToSpeaker(thisSpeaker, speech)
 
@@ -373,6 +379,8 @@ if __name__ == "__main__":
 
     # export allSpeeches to excel
     allSpeeches.to_excel(directory + "/allspeeches.xlsx")
+    allSpeeches.to_csv(directory + "/allspeeches.csv")
+    print("total files processed:", filesProcessed)
 
     for file in os.listdir(directory + "/speeches/"):
         if file.endswith(".txt"):

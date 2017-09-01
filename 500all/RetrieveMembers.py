@@ -46,7 +46,7 @@ class RetrieveMembers:
                     committee_code = parent.get('code') + "-" + committee_code
 
             findMembers = etree.XPath(xpathString + "/member", namespaces={"re": "http://exslt.org/regular-expressions"})
-            committee = {"name": [], "state": [], "level": [], "govtrack": []}
+            committee = {"first": [], "last": [], "state": [], "level": [], "govtrack": []}
             for member in findMembers(self.root):
                 memberId = member.get('id')
                 memberRole = member.get('role')
@@ -55,11 +55,13 @@ class RetrieveMembers:
                 isMemberFound = False
                 for rep in self.legi:
                     if rep['id']['govtrack'] == int(memberId):
-                        fullName = rep['name']['official_full']
+                        firstName = rep['name']['first']
+                        lastName = rep['name']['last']
                         for term in rep['terms']:
                             if term['start'][0:4] == "2015" or term['start'][0:4] == "2016" or memberId == "412306":
                                 state = term['state']
-                                committee["name"].append(fullName)
+                                committee["first"].append(firstName)
+                                committee["last"].append(lastName)
                                 committee["state"].append(state)
                                 committee["level"].append(memberRole)
                                 committee["govtrack"].append(memberId)
@@ -76,7 +78,7 @@ class RetrieveMembers:
 '''
 retrieveMembers = RetrieveMembers()
 
-for file in glob.glob("CHRG-114hhrg20596.txt"):
+for file in glob.glob("CHRG-114hhrg21381.txt"):
     print(file)
     com, com_name, com_code = retrieveMembers.findMembers(file)
     print(com)
