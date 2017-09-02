@@ -171,7 +171,7 @@ def addSpeechToSpeaker(speakerName, speech,
 def findSpeakerFromCommittee(speaker):
     for index, person in enumerate(committee['last']):
         if speaker.upper() in person.upper():
-            return committee['first'], person, committee['govtrack'][index]
+            return committee['first'][index], person, committee['govtrack'][index]
     return "", speaker, "N/A"
 
 
@@ -359,7 +359,7 @@ if __name__ == "__main__":
         if not os.path.isdir(directory + "/speech_level"):
             os.makedirs(directory + "/speech_level")
 
-        thisDf = pd.DataFrame(speeches, columns=["committee_name", "committee_code", "file_name", "title", "govtrack", "speaker", "speech"])
+        thisDf = pd.DataFrame(speeches, columns=["committee_name", "committee_code", "file_name", "title", "govtrack", "speaker_last", "speaker_first", "speech"])
         thisDf = thisDf.applymap(lambda x: x.encode('unicode_escape').decode('utf-8') if isinstance(x, str) else x)
         allSpeeches = pd.concat([allSpeeches, thisDf])
         thisDf.to_excel(directory + "/speech_level/speeches_" + thisFile.replace("txt", "xlsx"))
@@ -379,7 +379,7 @@ if __name__ == "__main__":
 
     # export allSpeeches to excel
     allSpeeches.to_excel(directory + "/allspeeches.xlsx")
-    allSpeeches.to_csv(directory + "/allspeeches.csv")
+    allSpeeches.to_csv(directory + "/allspeeches.csv", encoding='utf-8')
     print("total files processed:", filesProcessed)
 
     for file in os.listdir(directory + "/speeches/"):
