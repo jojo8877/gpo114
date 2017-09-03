@@ -99,6 +99,8 @@ def isName(
     if "of" in s:  # Sometimes there is expressions like Mr. Smith of Texas or Mrs. Davis of California.
         s.replace("of", "")
     for item in s.split():
+        if item.isupper():
+            return True
         if item[0].islower() or item[1].isupper():
             return False
     return True
@@ -171,8 +173,8 @@ def addSpeechToSpeaker(speakerName, speech,
 def findSpeakerFromCommittee(speaker):
     for index, person in enumerate(committee['last']):
         if speaker.upper() in person.upper():
-            return committee['first'][index], person, committee['govtrack'][index]
-    return "", speaker, "N/A"
+            return committee['first'][index], person, committee['govtrack'][index], committee['level'][index]
+    return "", speaker, "N/A", ""
 
 
 if __name__ == "__main__":
@@ -231,6 +233,7 @@ if __name__ == "__main__":
                     "file_name": [],
                     "title": [],
                     "govtrack": [],
+                    "ranking": [],
                     "speaker_last": [],
                     "speaker_first": [],
                     "speech": []}  # Save the speeches and speakers temporarily. Will be saved as the hearing segmented by speakers.
@@ -272,12 +275,13 @@ if __name__ == "__main__":
 
             if "Whereupon" in line and "adjourned" in line:  # At the end of hearing, there is "Whereupon, the committee was adjourned."
                 isSpeech = False
-                thisSpeakerFirst, thisSpeakerLast, thisSpeakerGovtrack = findSpeakerFromCommittee(thisSpeaker)
+                thisSpeakerFirst, thisSpeakerLast, thisSpeakerGovtrack, thisRanking = findSpeakerFromCommittee(thisSpeaker)
                 speeches['committee_name'].append(committee_name)
                 speeches['committee_code'].append(committee_code)
                 speeches['file_name'].append(thisFile)
                 speeches['title'].append(thisTitle)
                 speeches['govtrack'].append(thisSpeakerGovtrack)
+                speeches['ranking'].append(thisRanking)
                 speeches["speaker_last"].append(thisSpeakerLast)
                 speeches["speaker_first"].append(thisSpeakerFirst)
                 speeches["speech"].append(speech)
@@ -315,12 +319,13 @@ if __name__ == "__main__":
                     if isNewSpeaker(
                             line):  # If a new speaker is detected, save the latest speech to the previous speaker
                         if thisSpeaker != "":
-                            thisSpeakerFirst, thisSpeakerLast, thisSpeakerGovtrack = findSpeakerFromCommittee(thisSpeaker)
+                            thisSpeakerFirst, thisSpeakerLast, thisSpeakerGovtrack, thisRanking = findSpeakerFromCommittee(thisSpeaker)
                             speeches['committee_name'].append(committee_name)
                             speeches['committee_code'].append(committee_code)
                             speeches['file_name'].append(thisFile)
                             speeches['title'].append(thisTitle)
                             speeches['govtrack'].append(thisSpeakerGovtrack)
+                            speeches['ranking'].append(thisRanking)
                             speeches["speaker_last"].append(thisSpeakerLast)
                             speeches["speaker_first"].append(thisSpeakerFirst)
                             speeches["speech"].append(speech)
@@ -359,7 +364,7 @@ if __name__ == "__main__":
         if not os.path.isdir(directory + "/speech_level"):
             os.makedirs(directory + "/speech_level")
 
-        thisDf = pd.DataFrame(speeches, columns=["committee_name", "committee_code", "file_name", "title", "govtrack", "speaker_last", "speaker_first", "speech"])
+        thisDf = pd.DataFrame(speeches, columns=["committee_name", "committee_code", "file_name", "title", "govtrack", "ranking", "speaker_last", "speaker_first", "speech"])
         thisDf = thisDf.applymap(lambda x: x.encode('unicode_escape').decode('utf-8') if isinstance(x, str) else x)
         allSpeeches = pd.concat([allSpeeches, thisDf])
         thisDf.to_excel(directory + "/speech_level/speeches_" + thisFile.replace("txt", "xlsx"))

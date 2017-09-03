@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/500all$prepareText_new.coverage" NAME="prepareText_new Coverage Results" MODIFIED="1504394894629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/500all$prepareText_new.coverage" NAME="prepareText_new Coverage Results" MODIFIED="1504405199655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/500all$prepareText_kye.coverage" NAME="prepareText_kye Coverage Results" MODIFIED="1502845841448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/500all$RetrieveMembers.coverage" NAME="RetrieveMembers Coverage Results" MODIFIED="1504233255536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -23,7 +23,7 @@
       <file leaf-file-name="RetrieveMembers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RetrieveMembers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
+            <state relative-caret-position="877">
               <caret line="87" column="3" lean-forward="false" selection-start-line="87" selection-start-column="3" selection-end-line="87" selection-end-column="3" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -35,13 +35,42 @@
       <file leaf-file-name="prepareText_new.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/prepareText_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="363" column="54" lean-forward="true" selection-start-line="363" selection-start-column="54" selection-end-line="363" selection-end-column="54" />
+            <state relative-caret-position="448">
+              <caret line="160" column="58" lean-forward="true" selection-start-line="160" selection-start-column="58" selection-end-line="160" selection-end-column="58" />
               <folding>
                 <element signature="e#0#66#0" expanded="true" />
-                <element signature="e#12006#12082#0" expanded="false" />
-                <element signature="e#13321#14230#0" expanded="false" />
+                <element signature="e#13507#14416#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CHRG-114hhrg23764.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CHRG-114hhrg23764.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5264">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CHRG-114hhrg21284.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CHRG-114hhrg21284.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CHRG-114hhrg93579.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CHRG-114hhrg93579.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,8 +78,8 @@
       <file leaf-file-name="CHRG-114hhrg21381.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CHRG-114hhrg21381.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-976">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="47">
+              <caret line="73" column="67" lean-forward="false" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -59,38 +88,18 @@
       <file leaf-file-name="legislators-current.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legislators-current.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="28978" column="12" lean-forward="false" selection-start-line="28978" selection-start-column="6" selection-end-line="28978" selection-end-column="12" />
+            <state relative-caret-position="303">
+              <caret line="6021" column="26" lean-forward="false" selection-start-line="6021" selection-start-column="26" selection-end-line="6021" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CHRG-114hhrg94542.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CHRG-114hhrg94542.txt">
+      <file leaf-file-name="legislators-historical.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legislators-historical.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="1088" column="9" lean-forward="false" selection-start-line="1088" selection-start-column="9" selection-end-line="1088" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cell.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/openpyxl/cell/cell.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/pandas/core/frame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="1423" column="0" lean-forward="false" selection-start-line="1423" selection-start-column="0" selection-end-line="1423" selection-end-column="0" />
+            <state relative-caret-position="94">
+              <caret line="584272" column="24" lean-forward="false" selection-start-line="584272" selection-start-column="18" selection-end-line="584272" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -109,8 +118,8 @@
       <file leaf-file-name="CommitteeMembership114.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CommitteeMembership114.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="1403" column="33" lean-forward="false" selection-start-line="1403" selection-start-column="33" selection-end-line="1403" selection-end-column="33" />
+            <state relative-caret-position="104">
+              <caret line="2464" column="26" lean-forward="false" selection-start-line="2464" selection-start-column="20" selection-end-line="2464" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -120,14 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>412473</find>
-      <find>committee on foreign affairs</find>
-      <find>finished ana</find>
-      <find>speeches</find>
-      <find>with an answer of: Of that 1,954 miles</find>
-      <find>Whereupon</find>
-      <find>speech</find>
-      <find>gambler</find>
       <find>dataframe</find>
       <find>lynch</find>
       <find>pd</find>
@@ -150,6 +151,14 @@
       <find>hsif</find>
       <find>&quot;last&quot;</find>
       <find>finished</find>
+      <find>o'carroll</find>
+      <find>washington, d.c.</find>
+      <find>washington, DC.</find>
+      <find>412196</find>
+      <find>hswm</find>
+      <find>boustany</find>
+      <find>400636</find>
+      <find>isspeech</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -174,7 +183,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2563" />
+    <option name="width" value="2560" />
     <option name="height" value="1339" />
   </component>
   <component name="ProjectView">
@@ -514,14 +523,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2563" height="1339" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="2560" height="1339" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1404604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.140625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3055118" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3055118" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -573,7 +581,7 @@
           <line>323</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -631,14 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="48" lean-forward="true" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legislators-historical.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="587261" column="24" lean-forward="false" selection-start-line="587261" selection-start-column="15" selection-end-line="587261" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -917,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CommitteeMembership114.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="1403" column="33" lean-forward="false" selection-start-line="1403" selection-start-column="33" selection-end-line="1403" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -935,23 +927,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CHRG-114hhrg21381.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-976">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="47">
+          <caret line="73" column="67" lean-forward="false" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/legislators-current.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="28978" column="12" lean-forward="false" selection-start-line="28978" selection-start-column="6" selection-end-line="28978" selection-end-column="12" />
+        <state relative-caret-position="303">
+          <caret line="6021" column="26" lean-forward="false" selection-start-line="6021" selection-start-column="26" selection-end-line="6021" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legislators-historical.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="584272" column="24" lean-forward="false" selection-start-line="584272" selection-start-column="18" selection-end-line="584272" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CommitteeMembership114.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="2464" column="26" lean-forward="false" selection-start-line="2464" selection-start-column="20" selection-end-line="2464" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHRG-114hhrg93579.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHRG-114hhrg23764.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5264">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHRG-114hhrg21284.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RetrieveMembers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
+        <state relative-caret-position="877">
           <caret line="87" column="3" lean-forward="false" selection-start-line="87" selection-start-column="3" selection-end-line="87" selection-end-column="3" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -961,12 +993,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/prepareText_new.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="363" column="54" lean-forward="true" selection-start-line="363" selection-start-column="54" selection-end-line="363" selection-end-column="54" />
+        <state relative-caret-position="448">
+          <caret line="160" column="58" lean-forward="true" selection-start-line="160" selection-start-column="58" selection-end-line="160" selection-end-column="58" />
           <folding>
             <element signature="e#0#66#0" expanded="true" />
-            <element signature="e#12006#12082#0" expanded="false" />
-            <element signature="e#13321#14230#0" expanded="false" />
+            <element signature="e#13507#14416#0" expanded="false" />
           </folding>
         </state>
       </provider>
