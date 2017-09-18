@@ -181,7 +181,7 @@ if __name__ == "__main__":
 
     directory = "."  # A default directory if no directory is given in previous step.
 
-    hearingInfo = pd.DataFrame.from_csv(directory + "/500all.csv")  # Previously worked out.
+    hearingInfo = pd.DataFrame.from_csv(directory + "/300part_list.csv")  # Previously worked out.
 
     info = pd.DataFrame()  # An empty data frame. Will contain information for all hearings.
 
