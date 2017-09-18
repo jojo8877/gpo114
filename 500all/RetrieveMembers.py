@@ -19,10 +19,13 @@ class RetrieveMembers:
         with open(pfileName) as fileName:
             text = fileName.read()
             searchResult = self.pattern.findall(text)
-            if (len(searchResult) <= 0):
+            if (len(searchResult) <= 0 and pfileName != "CHRG-114hhrg97454.txt"):
                 self.errorCount += 1
                 return None, "", ""
-            lastOccurredCommittee = self.pattern.findall(text)[-1][0]
+            if pfileName == "CHRG-114hhrg97454.txt":
+                lastOccurredCommittee = "Subcommittee on Military Construction, Veterans Affairs, and Related Agencies"
+            else:
+                lastOccurredCommittee = self.pattern.findall(text)[-1][0]
             xpathString = ''
             if lastOccurredCommittee[0:3].lower() == "sub": # if subcommittee
                 lastOccurredCommittee = lastOccurredCommittee[16:]
@@ -78,7 +81,7 @@ class RetrieveMembers:
 '''
 retrieveMembers = RetrieveMembers()
 
-for file in glob.glob("CHRG-114hhrg21381.txt"):
+for file in glob.glob("CHRG-114hhrg97454.txt"):
     print(file)
     com, com_name, com_code = retrieveMembers.findMembers(file)
     print(com)

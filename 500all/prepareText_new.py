@@ -181,7 +181,7 @@ if __name__ == "__main__":
 
     directory = "."  # A default directory if no directory is given in previous step.
 
-    hearingInfo = pd.DataFrame.from_csv(directory + "/500all.csv")  # Previously worked out.
+    hearingInfo = pd.DataFrame.from_csv(directory + "/hsap.csv")  # Previously worked out.
 
     info = pd.DataFrame()  # An empty data frame. Will contain information for all hearings.
 
@@ -268,7 +268,14 @@ if __name__ == "__main__":
                 if len(line.split()) > 0 and witnessSpace == 1:
                     witnessInfo += line
 
-            if "met, pursuant to" in line or "convened, pursuant to" in line or "Washington, DC." in line or "met, Pursuant to" in line:
+            if "met, pursuant to" in line or "convened, pursuant to" in line or "Washington, DC." in line or "met, Pursuant to" in line\
+                    or "Monday" in line\
+                    or "Tuesday" in line\
+                    or "Wednesday" in line\
+                    or "Thursday" in line\
+                    or "Friday" in line\
+                    or "Saturday" in line\
+                    or "Sunday" in line:
                 isSpeech = True
                 speech = ""
                 thisSpeaker = ""
